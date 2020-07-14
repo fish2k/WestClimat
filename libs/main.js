@@ -45,6 +45,11 @@ $(document).ready(function () {
     var productSlider = new Swiper('.products-slider', {
         slidesPerView: 4,
         loop: true,
-        spaceBetween: 30
+        spaceBetween: 30,
+
+        navigation: {
+            prevEl: '.products-prev',
+            nextEl: '.products-next'
+        }
     })
 })
