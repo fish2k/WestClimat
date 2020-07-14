@@ -918,6 +918,10 @@ body {
     color: #fff;
 }
 
+.footer-list-link:hover {
+    color: #fff;
+}
+
 .footer-copyright {
     margin-top: 94px;
     text-align: center;

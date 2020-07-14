@@ -32,12 +32,12 @@ $(document).ready(function () {
 
         _this.hover(
             function () {
-                $('.header-nav-drop[data-drop-id=' + getID + ']').stop().fadeIn();
-                $('.overlay').addClass('on-nav-hover').css('top', $('.header-nav-drop').offset().top + 'px');
+                $('.header-nav-drop[data-drop-id=' + getID + ']').stop().fadeIn()
+                $('.overlay').addClass('on-nav-hover').css('top', $('.header-nav-drop').offset().top + 'px')
             },
             function () {
-                $('.header-nav-drop[data-drop-id=' + getID + ']').stop().fadeOut();
-                $('.overlay').removeClass('on-nav-hover').css('top', '0');
+                $('.header-nav-drop[data-drop-id=' + getID + ']').stop().fadeOut()
+                $('.overlay').removeClass('on-nav-hover').css('top', '0')
             }
         )
     })
