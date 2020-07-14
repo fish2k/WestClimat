@@ -424,3 +424,108 @@ body {
     opacity: 1;
     z-index: 2;
 }
+
+.products-list {
+    margin-top: 95px;
+}
+
+.section-heading {
+    font-size: 30px;
+    font-weight: var(--font-light);
+    color: var(--darkblue)
+}
+
+.products-slider {
+    margin-top: 48px;
+}
+
+.product-item {
+    border: 2px solid #f5f5f5;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-preview {
+    padding-bottom: 326px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.product-body {
+    background-color: #f5f5f5;
+    padding: 12px 28px;
+}
+
+.product-rating-list {
+    display: flex;
+    flex: 0 0 100px;
+    max-width: 100px;
+    margin-right: 21px;
+}
+
+.product-rating {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.product-rating-item {
+    flex: 0 0 16px;
+    max-width: 16px;
+    height: 16px;
+
+    margin-right: 5px;
+    filter: grayscale(100%);
+    opacity: 0.5;
+
+    background-image: url(../images/rate-star.svg);
+    background-repeat: no-repeat;
+}
+
+.product-rating-item.active {
+    opacity: 1;
+    filter: grayscale(0%)
+}
+
+.product-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-name {
+    font-size: 18px;
+    word-break: break-word;
+    color: var(--darkblue);
+    height: 64px;
+}
+
+.product-name:hover {
+    text-decoration: none;
+    color: var(--darkblue)
+}
+
+.product-flex {
+    margin-top: 29px;
+}
+
+.product-price {
+    font-size: 18px;
+}
+
+.product-price-old {
+    text-decoration: line-through;
+    color: var(--gray);
+}
+
+.product-price-new {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1.47;
+}
+
+.product-price-new span {
+    font-size: 72%;
+}
+
+.product-price-credit {
+    color: var(--gray)
+}
