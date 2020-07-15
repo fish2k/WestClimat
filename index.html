@@ -49,7 +49,7 @@
             <a href="tel:+78553400054" class="header-contact-link header-contact-tel">
               +7 (8553) 40-00-54
             </a>
-            <a href="javascript:void(0)" class="header-contact-link header-contact-modal">
+            <a href="javascript:void(0)" class="header-contact-link header-contact-modal" data-toggle="modal" data-target="#consultModal">
               Консультация
             </a>
           </div>
@@ -694,6 +694,36 @@
 
     <div class="footer-copyright">
       <img src="images/payments.png" class="footer-payments" alt=""> ТМК «Вест климат», 2015-2020, www.westclimat.com
+    </div>
+  </div>
+</div>
+
+<!-- Consult Modal -->
+<div class="modal modal-custom fade" id="consultModal" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="consultModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-custom modal-dialog-centered">
+    <div class="modal-content modal-content-custom">
+      <div class="modal-custom-head">
+        <div class="modal-custom-title">Консультация <div class="modal-custom-close" data-dismiss="modal"><img src="images/modal-close.svg" alt=""></div></div>
+      </div>
+      <div class="modal-custom-body">
+        <p>
+          Подбор оборудования и услуг по Вашим требованиям и бюджету. <br>
+          Оставьте заявку прямо сейчас!
+        </p>
+
+        <form class="modal-form">
+          <input type="text" class="modal-form-input" placeholder="Имя">
+          <input type="text" class="modal-form-input" placeholder="Телефон">
+          <button class="modal-form-button" type="submit">
+            Оставить заявку
+          </button>
+
+          <div class="modal-agree">
+            Нажимая на кнопку “Оставть заявку”,<br>
+            Вы соглашаетесь на обратотку персональных данных.
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>
