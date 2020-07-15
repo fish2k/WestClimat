@@ -3,3 +3,62 @@
         max-width: 1500px;
     }
 }
+
+@media (max-width: 1500px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .header-action {
+        margin-right: 25px;
+    }
+
+    .header-action:last-child {
+        margin-right: 0;
+    }
+
+    .advantage-item {
+        font-size: 18px;
+    }
+
+    .header-action-icon {
+        flex: 0 0 auto;
+        min-width: 30px;
+    }    
+
+    .contacts .section-heading {
+        font-size: 24px;
+    }
+
+    .contacts-item {
+        padding-left: 0;
+        padding-right: 15px;
+    }
+
+    .header-logo-src {
+        max-width: 200px;
+    }
+
+    .header-contact {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .header-top-link {
+        margin-right: 15px;
+    }
+
+    .header-actions {
+        justify-content: flex-end;
+        padding-left: 0;
+    }
+
+    .header-logo-src {
+        max-width: 180px;
+    }
+
+    .advantage-title {
+        padding-left: 25px;
+    }
+}

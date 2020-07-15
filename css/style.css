@@ -103,6 +103,12 @@ body {
     padding: 30px 0;
 }
 
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .header-contact {
     display: flex;
     flex-direction: column;
@@ -389,7 +395,7 @@ body {
 }
 
 .slider-top-slide {
-    padding-bottom: 400px;
+    padding-bottom: 55.556%;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -426,7 +432,7 @@ body {
     opacity: 0;
 }
 
-[class*="on-"] {
+[class*="state-"] {
     opacity: 1;
     z-index: 2;
 }
@@ -822,6 +828,7 @@ body {
 }
 
 .post-arrow {
+    flex: 0 0 auto;
     width: 60px;
     height: 60px;
     background-color: #c4c4c4;
