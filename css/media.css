@@ -5,6 +5,14 @@
 }
 
 @media (max-width: 1500px) {
+    .products-prev {
+        left: 15px;
+    }
+
+    .products-next {
+        right: 15px;
+    }
+
     .container {
         max-width: 100%;
     }
@@ -42,9 +50,25 @@
     .header-contact {
         padding-right: 0;
     }
+    
+    .brand-p {
+        padding-right: 0;
+    }
 }
 
 @media (max-width: 1200px) {
+    .header-action-body {
+        padding-left: 8px;
+    }
+
+    .header-nav-link {
+        font-size: 15px;
+    }
+
+    .header-nav-item {
+        margin-right: 18px;
+    }
+
     .header-top-link {
         margin-right: 15px;
     }
@@ -60,5 +84,225 @@
 
     .advantage-title {
         padding-left: 25px;
+    }
+
+    .section-brand {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    .services-item {
+        padding: 15px;
+    }
+
+    .col-brand {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 991px) {
+    .post-item {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    .post-photo {
+        padding-bottom: 50%;
+    }
+    
+    .responsive-item {
+        display: block;
+    }
+
+    .header-tel {
+        color: #fff;
+        line-height: 1.7
+    }
+
+    .header-top-list {
+        display: none;
+    }
+
+    .header-top-link,
+    .header-top-city {
+        font-size: 14px;
+    }
+
+    .header-top {
+        padding: 5px 0;
+    }
+
+    .header-top-city {
+        background-size: 15px;
+        background-position-y: 1px;
+        padding-left: 20px;
+    }
+
+    .header-nav {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -280px;
+        width: 280px;
+        z-index: 2;
+    }
+
+    .header-main {
+        display: none;
+    }
+
+    .responsive-logo-src {
+        max-width: 170px;
+    }
+
+    .responsive-btn {
+        display: flex;
+        margin-right: 15px;
+        position: relative;
+    }
+
+    .has-items-count {
+        position: absolute;
+        bottom: -3px;
+        right: -4px;
+        width: 15px;
+        height: 15px;
+        background-color: var(--accent);
+
+        color: #fff;
+        line-height: 15px;
+        font-size: 11px;
+        text-align: center;
+        border-radius: 50%;
+    }
+
+    .responsive-btn:last-child {
+        margin-right: 0;
+    }
+
+    .responsive-btn-icon {
+        height: 30px;
+        flex: 0 0 30px;
+        max-width: 30px;
+        width: 30px;
+    }
+
+    .row-responsive {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .col-btns {
+        display: flex;
+    }
+
+    .header-responsive {
+        display: block;
+        padding: 10px 0;
+        box-shadow: 0 0 15px 0 rgba(0,0,0, .1);
+    }
+    
+    .col-logo,
+    .col-btns {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .col-services {
+        margin-bottom: 15px;
+    }
+
+    .advantage-item {
+        margin-bottom: 30px;
+        flex-direction: column;
+    }
+
+    .advantage-title {
+        padding-left: 0;
+        padding-top: 10px;
+    }
+
+    .col-advantage {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .product-preview {
+        background-size: contain;
+    }
+
+    .advantage-title {
+        font-size: 15px;
+    }
+
+    .advantage {
+        margin-top: 20px;
+    }
+
+    .products-list {
+        margin-top: 50px;
+    }
+
+    .slider-top {
+        margin-bottom: 30px;
+    }
+
+    .services-item-image {
+        margin-right: 15px;
+        font-size: 16px;
+    }
+
+    .product-flex {
+        flex-wrap: wrap;
+        height: 163px;
+        margin-top: 10px;
+    }
+
+    .product-body {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .product-flex-end {
+        margin-top: 10px;
+    }
+
+    .product-btns {
+        justify-content: space-between;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .product-flex-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-pagination-item {
+        width: 35px;
+        height: 35px;
+
+        background-size:9px;
+    }
+
+    .product-preview {
+        background-size: contain;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding-bottom: 200px;
+    }
+
+    .product-flex {
+        height: 115px;
+    }
+
+    .product-price-old,
+    .product-price-credit {
+        display: none;
     }
 }

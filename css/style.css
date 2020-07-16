@@ -55,6 +55,10 @@ body {
     background-color: white;
 }
 
+.responsive-item {
+    display: none;
+}
+
 .header-top {
     background-color: var(--darkblue);
     color: #fff;
@@ -509,6 +513,7 @@ body {
     word-break: break-word;
     color: var(--darkblue);
     height: 64px;
+    overflow: hidden;
 }
 
 .product-name:hover {
@@ -727,12 +732,20 @@ body {
     margin-top: 48px;
 }
 
+.services-item-name {
+    padding-right: 80px;
+}
+
 .services-item-image {
     padding-bottom: 21.2%;
     flex: 0 0 47.8%;
     max-width: 47.8%;
     margin-right: 30px;
     position: relative;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .services-item-image::after {
@@ -1032,4 +1045,8 @@ body {
 
 .modal-custom-close {
     cursor: pointer;
+}
+
+.header-responsive {
+    display: none;
 }
