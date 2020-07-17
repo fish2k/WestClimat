@@ -102,6 +102,10 @@
 }
 
 @media (max-width: 991px) {
+    .top-sliders {
+        margin-top: 15px;
+    }
+
     .state-search .search-responsive {
         display: block;
     }
@@ -433,7 +437,7 @@
     }
 
     .slider-top {
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
 
     .services-item-image {
