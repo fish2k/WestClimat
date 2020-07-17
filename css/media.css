@@ -324,6 +324,32 @@
 }
 
 @media (max-width: 767px) {
+    .modal-form {
+        margin-top: 20px;
+    }
+
+    .modal-dialog-custom {
+        min-width: 100%;
+    }
+
+    .modal-custom-body {
+        background-image: none;
+        font-size: 14px;
+    }
+
+    .modal-custom-body br {
+        display: none;
+    }
+
+    .modal-agree {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .modal-form {
+        max-width: 100%;
+    }
+
     .contacts-item-desc {
         font-size: 14px;
     }
@@ -471,6 +497,56 @@
 }
 
 @media (max-width: 480px) {
+    .section-brand {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .footer-copyright {
+        margin-top: 30px;
+    }
+
+    .slider-top-ellipse {
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .modal-custom-title {
+        font-size: 20px;
+    }
+
+    .modal-dialog-custom {
+        margin: 0;
+    }
+
+    .modal-form-input {
+        padding: 9px 15px;
+    }
+
+    .modal-form-button {
+        padding: 13px 0;
+    }
+
+    .modal-content-custom {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .modal-custom-body {
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    .modal-custom-title {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .modal-custom-close {
+        position: relative;
+        top: -2px;
+    }
+
     [data-empty] {
         display: none;
     }

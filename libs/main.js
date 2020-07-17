@@ -3,6 +3,11 @@ $(document).ready(function () {
     // prevent default on query
     $('.void').click(function () { return false })
 
+    var body    = $('body'),
+        overlay = $('.overlay'),
+        search  = $('.search-button'),
+        burger  = $('.header-burger')
+
     // top sliders
     if ($('.top-sliders').is(':visible')) { // if exist
         var globalDelay = 3000
@@ -62,21 +67,21 @@ $(document).ready(function () {
         )
     })
 
-    $('.header-burger')
+    burger
         .click(function () {
-            $('body').removeClass('state-search')
-            $('body').toggleClass('state-nav')
+            body.removeClass('state-search')
+            body.toggleClass('state-nav')
         })
 
-    $('.overlay')
+    overlay
         .click(function () {
-            $('body').removeClass('state-nav state-search')
+            body.removeClass('state-nav state-search')
         })
 
-    $('.search-button')
+    search
         .click(function () {
-            $('body').removeClass('state-nav')
-            $('body').toggleClass('state-search')
+            body.removeClass('state-nav')
+            body.toggleClass('state-search')
 
             $('.search-responsive-input').focus();
         })
