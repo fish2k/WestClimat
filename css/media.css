@@ -215,10 +215,15 @@
 
     .advantage-item {
         margin-bottom: 30px;
-        flex-direction: column;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .advantage-title {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
         padding-left: 0;
         padding-top: 10px;
     }
@@ -227,9 +232,119 @@
         flex: 0 0 50%;
         max-width: 50%;
     }
+
+    .product-preview {
+        padding-bottom: 70%;
+        background-size: contain;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .footer-payments {
+        position: static;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 15px;
+    }
+
+    .col-footer {
+        padding-left: 15px
+    }
+
+    .footer-description {
+        margin-bottom: 30px;
+    }
+
+    .contacts-item {
+        margin-bottom: 30px;
+    }
+
+    .contacts-item-desc {
+        order: 1
+    }
+
+    .contacts-item-icon {
+        order: 0;
+        margin-right: 15px;
+    }
+
+    .contacts-flex {
+        justify-content: flex-start;
+    }
+
+    .contacts-icon {
+        max-width: 40px;
+    }
 }
 
 @media (max-width: 767px) {
+    .contacts-item-desc {
+        font-size: 14px;
+    }
+
+    .col-contacts,
+    .col-post {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .post-name,
+    .post-footer-desc {
+        font-size: 14px;
+    }
+
+    .post-arrow {
+        width: 30px;
+        height: 30px;
+
+        background-size: 7px;
+    }
+
+    .post-body {
+        padding: 15px;
+    }
+
+    .col-footer {
+        margin-top: 30px;
+    }
+
+    .services-arrow {
+        width: 40px;
+        height: 40px;
+        background-size: 10px;
+        top: calc(50% - 20px);
+        right: 15px;
+    }
+
+    .brand-heading {
+        font-size: 48px;
+    }
+
+    .brand-contact {
+        font-size: 15px;
+    }
+
+    .brand-contact img {
+        max-width: 30px;
+    }
+
+    .brand-flex-item:first-child {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-top: 0;
+    }
+
+    .brand-flex-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-top: 30px;
+    }
+
+    .brand-flex {
+        flex-wrap: wrap;
+    }
+
     .product-preview {
         background-size: contain;
     }
@@ -280,9 +395,119 @@
         flex: 0 0 100%;
         max-width: 100%;
     }
+
+    .stocks-objects {
+        margin-top: 50px;
+    }
+
+    .row-posts {
+        margin-top: 15px;
+    }
+
+    .contacts {
+        margin-top: 50px;
+    }
+
+    .contacts .section-heading {
+        font-size: 20px;
+    }
+
+    .section-brand {
+        margin-top: 50px;
+    }
+
+    .services {
+        margin-top: 50px;
+    }
+
+    .row-services {
+        margin-top: 15px;
+    }
 }
 
 @media (max-width: 480px) {
+    .brand-btn {
+        width: 100%;
+        text-align: center;
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    .brand-heading {
+        font-size: 34px;
+        margin-bottom: 30px;
+    }
+
+    .brand-p {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .product-name {
+        font-size: 16px;
+        height: 54px;
+    }
+
+    .product-price-new {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .footer-logo-src {
+        max-width: 280px;
+    }
+
+    .footer {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .footer-description {
+        margin-top: 30px;
+    }
+
+    .col-contacts,
+    .col-post {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .responsive-logo-src {
+        max-width: 140px;
+    }
+
+    .services-item {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .services-item-image {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-bottom: 44.2%;
+    }
+
+    .services-item-name {
+        margin-top: 15px;
+        font-size: 13px;
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .services-arrow {
+        top: 30px;
+        right: 30px;
+        width: 30px;
+        height: 30px;
+        background-size: 8px;
+    }
+
+    .section-heading {
+        font-size: 20px;
+    }
+
     .products-pagination-item {
         width: 35px;
         height: 35px;

@@ -57,9 +57,10 @@ $(document).ready(function () {
                 slidesPerView: 1
             },
             480: {
-                slidesPerView: 2
+                slidesPerView: 2,
+                spaceBetween: 10
             },
-            1200: {
+            1100: {
                 slidesPerView: 3
             },
             1440: {
