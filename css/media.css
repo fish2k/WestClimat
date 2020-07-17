@@ -140,7 +140,7 @@
     }
     
     .responsive-item {
-        display: block;
+        display: flex;
     }
 
     .header-tel {
@@ -497,6 +497,17 @@
 }
 
 @media (max-width: 480px) {
+    .header-tel,
+    .header-top-city {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .header-top-city {
+        background-size: 12px;
+        padding-left: 18px;
+    }
+
     .section-brand {
         padding-top: 50px;
         padding-bottom: 50px;
@@ -552,11 +563,11 @@
     }
 
     .header {
-        height: 92px;
+        height: 83px;
     }
 
     .header-nav {
-        top: 92px;
+        top: 83px;
     }
 
     .brand-btn {
