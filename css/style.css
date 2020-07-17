@@ -44,6 +44,7 @@ a:hover {
 html,
 body {
     overflow-x: hidden;
+    height: 100%;
 }
 
 body {
@@ -432,11 +433,15 @@ body {
 
     z-index: -1;
 
-    transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease;
     opacity: 0;
 }
 
-[class*="state-"] {
+body[class*="state-"] {
+    overflow: hidden;
+}
+
+[class*="state-"] .overlay {
     opacity: 1;
     z-index: 2;
 }
@@ -1049,4 +1054,88 @@ body {
 
 .header-responsive {
     display: none;
+}
+
+.header-burger {
+    display: none;
+    position: fixed;
+    top: 110px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+
+    background-color: #fff;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 15px 0 rgba(0,0,0, .1);
+}
+
+.burger-line {
+    position: absolute;
+    height: 4px;
+    background-color: var(--accent);
+    border-radius: 4px;
+    left: 12px;
+    right: 12px;
+
+    transition: all .3s ease;
+}
+
+.line-1 {
+    top: 13px
+}
+.line-2 {
+    top: 23px
+}
+.line-3 {
+    top: 33px
+}
+
+.state-nav .line-1 {
+    top: calc(50% - 2px);
+    transform: rotate(135deg);
+}
+
+.state-nav .line-2 {
+    opacity: 0;
+}
+
+.state-nav .line-3 {
+    top: calc(50% - 2px);
+    transform: rotate(-135deg);
+}
+
+.search-responsive {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fff;
+}
+
+.search-responsive-input {
+    width: 100%;
+    border: 2px solid #c4c4c4;
+    border-radius: 4px;
+    padding: 10px 15px;
+
+    color: var(--accent);
+}
+
+.search-responsive-input:focus {
+    border-color: var(--accent);
+}
+
+.slider-top-ellipse {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    z-index: 2;
+
+    transform: rotate(0deg)
 }

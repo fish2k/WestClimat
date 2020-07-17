@@ -94,19 +94,24 @@
           </a>
         </div>
         <div class="col-btns">
-          <a href="javascript:void(0)" class="responsive-btn void">
+          <a href="javascript:void(0)" class="responsive-btn search-button">
             <img class="responsive-btn-icon" src="images/header-search-icon.svg" alt="Поиск">
           </a>
-          <a href="javascript:void(0)" class="responsive-btn void">
+          <a href="javascript:void(0)" class="responsive-btn">
             <img class="responsive-btn-icon" src="images/header-compare-icon.svg" alt="Сравнить">
             <div class="has-items-count">3</div>
           </a>
-          <a href="javascript:void(0)" class="responsive-btn void">
+          <a href="javascript:void(0)" class="responsive-btn">
             <img class="responsive-btn-icon" src="images/header-cart.svg" alt="Корзина">
             <div class="has-items-count">3</div>
           </a>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="search-responsive">
+    <div class="container">
+      <form class="search-responsive-form"><input class="search-responsive-input" type="text" placeholder="Начните набирать..."></form>
     </div>
   </div>
   <div class="header-nav">
@@ -216,6 +221,12 @@
   </div>
 </div>
 
+<div class="header-burger">
+  <div class="burger-line line-1"></div>
+  <div class="burger-line line-2"></div>
+  <div class="burger-line line-3"></div>
+</div>
+
 <div class="top-sliders">
   <div class="container">
     <div class="row">
@@ -225,6 +236,7 @@
             <div class="swiper-slide slider-top-slide" 
                 style="background-image: url(images/slider-1-slide.jpg);"></div>
           </div>
+          <div class="slider-top-ellipse"><img src="images/top-slider-ellipse.png" alt=""></div>
         </div>
       </div>
       <div class="col-md-6">
@@ -233,6 +245,7 @@
             <div class="swiper-slide slider-top-slide" 
                 style="background-image: url(images/slider-2-slide.jpg);"></div>
           </div>
+          <div class="slider-top-ellipse"><img src="images/top-slider-ellipse.png" alt=""></div>
         </div>
       </div>
     </div>
@@ -711,7 +724,7 @@
         </ul>
       </div>
       <div class="col-lg-4 col-md-6 col-footer">
-        <div class="footer-title">&nbsp;</div>
+        <div class="footer-title" data-empty>&nbsp;</div>
         <ul class="footer-list">
           <li class="footer-list-item"><a href="javascript:void(0)" class="footer-list-link">Доставка и оплата</a></li>
           <li class="footer-list-item"><a href="javascript:void(0)" class="footer-list-link">Гарантия</a></li>
@@ -757,6 +770,10 @@
     </div>
   </div>
 </div>
+
+<script>
+  //$('#consultModal').modal('show')
+</script>
 
 <div class="overlay"></div>
 
