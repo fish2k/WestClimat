@@ -325,9 +325,19 @@
         margin-top: 25px;
         text-transform: none;
     }
+
+    .brands-slide {
+        background-position: center center;
+    }
 }
 
 @media (max-width: 767px) {
+    .seo-block {
+        margin-top: 20px;
+        margin-bottom: 50px;
+        font-size: 14px;
+    }
+
     .modal-form {
         margin-top: 20px;
     }
@@ -501,6 +511,15 @@
 }
 
 @media (max-width: 480px) {
+    .product-labels {
+        top: 15px;
+        left: 15px;
+    }
+
+    .col-catalog-cats .services-item-image::after {
+        top: 44%;
+    }
+
     .header-tel,
     .header-top-city {
         font-size: 12px;

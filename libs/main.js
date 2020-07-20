@@ -20,10 +20,10 @@ $(document).ready(function () {
                     init: function () {
                         this.el.style.opacity = 1
 
-                        flipEllipse(-360);
+                        flipEllipse(-360)
                     },
                     slideChange: function () {
-                        flipEllipse(-360);
+                        flipEllipse(-360)
                     }
                 },
 
@@ -83,7 +83,7 @@ $(document).ready(function () {
             body.removeClass('state-nav')
             body.toggleClass('state-search')
 
-            $('.search-responsive-input').focus();
+            $('.search-responsive-input').focus()
         })
 
     var productSlider = new Swiper('.products-slider', {
@@ -112,4 +112,42 @@ $(document).ready(function () {
             }
         }
     })
-});
+
+    var brandsSider = new Swiper('.brands-slider', {
+        slidesPerView: 6,
+        loop: false,
+        spaceBetween: 22,
+
+        on: {
+            init: function () {
+                this.el.style.opacity = 1
+            }
+        },
+
+        autoplay: {
+            delay: 2000
+        },
+
+        breakpoints: {
+            0: {
+                slidesPerView: 1
+            },
+            375: {
+                slidesPerView: 2,
+                spaceBetween: 0
+            },
+            500: {
+                slidesPerView: 3
+            },
+            768: {
+                slidesPerView: 4
+            },
+            990: {
+                slidesPerView: 5
+            },
+            1200: {
+                slidesPerView: 6
+            }
+        }
+    })
+})
