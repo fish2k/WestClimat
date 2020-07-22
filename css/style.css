@@ -2043,3 +2043,7 @@ body[class*="state-"] {
 .history-list .swiper-slide:hover {
     opacity: 1;
 }
+
+.swiper-button-disabled {
+    opacity: 0;
+}

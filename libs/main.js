@@ -88,7 +88,7 @@ $(document).ready(function () {
 
     var productSlider = new Swiper('.products-slider', {
         slidesPerView: 4,
-        loop: true,
+        loop: false,
         spaceBetween: 30,
 
         navigation: {
