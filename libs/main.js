@@ -96,6 +96,12 @@ $(document).ready(function () {
             nextEl: '.products-next'
         },
 
+        on: {
+            init: function () {
+                this.el.style.opacity = 1
+            }
+        },
+
         breakpoints: {
             0: {
                 slidesPerView: 1
@@ -150,4 +156,49 @@ $(document).ready(function () {
             }
         }
     })
+
+    if (document.querySelector('.col-detail-content')) {
+        var detailThumbsSlider = new Swiper('.detail-slider-thumbs', {
+            slidesPerView: 4,
+            spaceBetween: 20,
+            freeMode: true,
+
+            on: {
+                init: function () {
+                    this.el.style.opacity = 1
+                }
+            },
+
+            breakpoints: {
+                0: {
+                    direction: 'horizontal',
+                    spaceBetween: 15
+                },
+                481: {
+                    direction: 'vertical',
+                }
+            }
+        })
+
+        var detailSlider = new Swiper('.detail-slider-main', {
+            slidesPerView: 1,
+            height: 'auto',
+
+            on: {
+                init: function () {
+                    this.el.style.opacity = 1
+                }
+            },
+
+            navigation: {
+                prevEl: '.detail-prev',
+                nextEl: '.detail-next'
+            },
+
+            thumbs: {
+                swiper: detailThumbsSlider
+            }
+
+        })
+    }
 })
