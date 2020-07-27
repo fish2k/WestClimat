@@ -50,6 +50,8 @@ $(document).ready(function () {
         }
     }
 
+    console.log($({geg: 0}));
+
     // top nav hover drop
     $('.drop-hover').each(function () {
         var _this = $(this),
