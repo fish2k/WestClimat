@@ -1,56 +1,55 @@
 $(document).ready(function () {
+    var body      = $('body'),
+        overlay   = $('.overlay'),
+        search    = $('.search-button'),
+        burger    = $('.header-burger'),
+        filterBtn = $('.catalog-filter')
 
-    // prevent default on query
-    $('.void').click(function () { return false })
-
-    var body    = $('body'),
-        overlay = $('.overlay'),
-        search  = $('.search-button'),
-        burger  = $('.header-burger')
-
-    // top sliders
+    // верхние слайдеры на главной странице
     if ($('.top-sliders').is(':visible')) { // if exist
-        var globalDelay = 3000
+            // задержка между слайдами 3 сек
+        var globalDelay = 3000,
+            // конфигурация слайдеров
+            topSliderConfig = {
+                slidesPerView: 1,
+                    loop: true,
 
-        var topSliderConfig = {
-            slidesPerView: 1,
-                loop: true,
+                    on: {
+                        init: function () {
+                            this.el.style.opacity = 1
 
-                on: {
-                    init: function () {
-                        this.el.style.opacity = 1
-
-                        flipEllipse(-360)
+                            flipEllipse(-360) // крутим эллипс
+                        },
+                        slideChange: function () {
+                            flipEllipse(-360) // крутим эллипс
+                        }
                     },
-                    slideChange: function () {
-                        flipEllipse(-360)
-                    }
-                },
 
-                autoplay: {
-                    delay: globalDelay
+                    autoplay: {
+                        delay: globalDelay
+                    }
                 }
-            }
     
-        // home sliders init
+        // инициализация слайдеров
         var topSliderLeft   = new Swiper('.slider-top-left',  topSliderConfig)
         var topSliderRight  = new Swiper('.slider-top-right', topSliderConfig)
-
+        
+        // крутим-вертим эллипсом на каждом слайде
         function flipEllipse(angle) {
-            var elem = $('.slider-top').find('.slider-top-ellipse');
+            var elem = $('.slider-top').find('.slider-top-ellipse')
 
             $({deg: 0}).animate({deg: angle}, {
                 duration: globalDelay,
                 step: function(now) {
                     elem.css({
                         transform: 'rotate(' + now.toFixed(0) + 'deg)'
-                    });
+                    })
                 }
-            });
+            })
         }
     }
 
-    // top nav hover drop
+    // ховер дроп у элементов навигации в шапке сайта
     $('.drop-hover').each(function () {
         var _this = $(this),
             getID = _this.data('nav-id')
@@ -67,25 +66,36 @@ $(document).ready(function () {
         )
     })
 
+    // кнопка "бургер" меню
     burger
         .click(function () {
-            body.removeClass('state-search')
+            body.removeClass('state-search state-filter')
             body.toggleClass('state-nav')
         })
 
+    // фоновая подложка
     overlay
         .click(function () {
-            body.removeClass('state-nav state-search')
+            body.removeClass('state-nav state-search state-filter')
         })
 
+    // мобильный поиск
     search
         .click(function () {
-            body.removeClass('state-nav')
+            body.removeClass('state-nav state-filter')
             body.toggleClass('state-search')
 
             $('.search-responsive-input').focus()
         })
-
+    
+    // кнопка "открыть фильтр"
+    filterBtn
+        .click(function () {
+            body.removeClass('state-nav state-search')
+            body.addClass('state-filter')
+        })
+    
+    // слайдер товаров по умолчанию
     var productSlider = new Swiper('.products-slider', {
         slidesPerView: 4,
         loop: false,
@@ -119,6 +129,7 @@ $(document).ready(function () {
         }
     })
 
+    // слайдер брэндов
     var brandsSider = new Swiper('.brands-slider', {
         slidesPerView: 6,
         loop: false,
@@ -157,7 +168,10 @@ $(document).ready(function () {
         }
     })
 
+    // слайдеры фотографий в карточке товара,
+    // проверка на наличие блока
     if (document.querySelector('.col-detail-content')) {
+        // слайдер миниатюр фотографий в карточке товара
         var detailThumbsSlider = new Swiper('.detail-slider-thumbs', {
             slidesPerView: 4,
             spaceBetween: 20,
@@ -180,6 +194,7 @@ $(document).ready(function () {
             }
         })
 
+        // главный слайдер в карточке товара
         var detailSlider = new Swiper('.detail-slider-main', {
             slidesPerView: 1,
             height: 'auto',
@@ -201,4 +216,9 @@ $(document).ready(function () {
 
         })
     }
+
+    // очищаем форму в нашей модалке
+    $('.modal-custom').on('hide.bs.modal', function () {
+        $(this).find('form.modal-form').get(0).reset()
+    })
 })

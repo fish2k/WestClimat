@@ -641,7 +641,7 @@ body[class*="state-"] {
 
 .product-btn:hover {
     background-color: var(--accent);
-    box-shadow: 9.259px 14.257px 43px 0px rgba(79, 154, 189, 0.4);
+    box-shadow: 9.259px 14.257px 43px 0px rgba(79, 154, 189, .5);
 }
 
 .product-btn:first-child {
@@ -844,6 +844,7 @@ body[class*="state-"] {
 .services-item:hover .services-arrow {
     background-color: var(--accent);
     background-image: url(../images/services-arrow-hover.svg);
+    box-shadow: 0px 0px 43px 0px rgba(79, 154, 189, 0.3);
 }
 
 .stocks-objects {
@@ -1557,7 +1558,7 @@ body[class*="state-"] {
 
 .col-product .post-body {
     padding-top: 50px;
-    padding-bottom: 44px;
+    padding-bottom: 47px;
 }
 
 .col-product .post-footer {
@@ -1869,6 +1870,8 @@ body[class*="state-"] {
 
 .detail-bubbles {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     margin-top: 62px;
 }
 
@@ -1942,6 +1945,7 @@ body[class*="state-"] {
 
 .detail-nav-link.active {
     border-color: var(--darkblue) !important;
+    color: var(--darkblue) !important
 }
 
 .nav-counter {
@@ -2489,4 +2493,68 @@ textarea.review-form-style {
 .contacts-page .contacts-icon {
     filter: grayscale(0%);
     opacity: 1;
+}
+
+.col-product .post-photo {
+    padding-bottom: 326px;
+}
+
+.catalog-filter {
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+
+    padding: 10px 15px;
+    background-color: var(--accent);
+    color: #fff;
+
+    border-radius: 30px;
+    
+    font-weight: 300;
+}
+
+.state-filter .catalog-filter {
+    display: none;
+}
+
+.detail-brand {
+    margin-left: 15px;
+    flex: 0 0 150px;
+    max-width: 150px;
+}
+
+.detail-compare {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    text-decoration: none;
+    color: var(--darkblue)
+}
+
+.detail-compare:hover {
+    text-decoration: none;
+    color: var(--darkblue)
+}
+
+.detail-compare span {
+    margin-left: 15px;
+}
+
+.detail-comapare-icon {
+    position: relative;
+}
+
+.detail-compare-count {
+    display: flex;
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 11px;
 }
