@@ -69,20 +69,20 @@ $(document).ready(function () {
     // кнопка "бургер" меню
     burger
         .click(function () {
-            body.removeClass('state-search state-filter')
+            body.removeClass('state-search state-filter state-widget')
             body.toggleClass('state-nav')
         })
 
     // фоновая подложка
     overlay
         .click(function () {
-            body.removeClass('state-nav state-search state-filter')
+            body.removeClass('state-nav state-search state-filter state-widget')
         })
 
     // мобильный поиск
     search
         .click(function () {
-            body.removeClass('state-nav state-filter')
+            body.removeClass('state-nav state-filter state-widget')
             body.toggleClass('state-search')
 
             $('.search-responsive-input').focus()
@@ -91,7 +91,7 @@ $(document).ready(function () {
     // кнопка "открыть фильтр"
     filterBtn
         .click(function () {
-            body.removeClass('state-nav state-search')
+            body.removeClass('state-nav state-search state-widget')
             body.addClass('state-filter')
         })
     
@@ -114,14 +114,16 @@ $(document).ready(function () {
 
         breakpoints: {
             0: {
-                slidesPerView: 1
+                slidesPerView: 2,
+                spaceBetween: 0
             },
             480: {
                 slidesPerView: 2,
                 spaceBetween: 10
             },
             1000: {
-                slidesPerView: 3
+                slidesPerView: 3,
+                spaceBetween: 30
             },
             1440: {
                 slidesPerView: 4

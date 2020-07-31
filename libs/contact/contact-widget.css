@@ -1,0 +1,122 @@
+.contact-widget {
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+
+    z-index: 3;
+}
+
+.contact-widget-trigger {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+
+    background-color: #089ade;
+    z-index: 2;
+
+    background-image: url(./contact-icons/comment.svg);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    animation: bubble 1s linear infinite alternate;
+    transition: all .2s ease;
+}
+
+.contact-widget-trigger::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(./contact-icons/close.svg);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: scale(0);
+    transition: all .2s ease;
+}
+
+@keyframes bubble {
+    from {
+        transform: scale(1.0)
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.state-widget .contact-widget-trigger {
+    background-color: #c4c4c4;
+    background-image: none;
+}
+
+.state-widget .contact-widget-trigger::before {
+    z-index: 2;
+    transform: scale(1.0);
+}
+
+.contact-widget-item {
+    position: absolute;
+
+    width: 60px;
+    height: 60px;
+
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #c0c0c0;
+    border-radius: 50%;
+    z-index: 1;
+
+    transition: all .2s ease-in-out;
+    transition-delay: 0s;
+    opacity: 0;
+}
+
+.state-widget .contact-widget-item {
+    opacity: 1;
+}
+
+.state-widget .contact-widget-item:nth-child(1) {
+    transform: translate(0, -115%);
+    transition-delay: 0ms;
+}
+.state-widget .contact-widget-item:nth-child(2) {
+    transform: translate(0, -230%);
+    transition-delay: 25ms;
+}
+.state-widget .contact-widget-item:nth-child(3) {
+    transform: translate(0, -345%);
+    transition-delay: 50ms;
+}
+.state-widget .contact-widget-item:nth-child(4) {
+    transform: translate(0, -460%);
+    transition-delay: 75ms;
+}
+
+.contact-vk {
+    background-image: url(./contact-icons/vk.svg);
+    background-color: #4A76A8;
+}
+
+.contact-phone {
+    background-image: url(./contact-icons/phone.svg);
+    background-color: #F46F30;
+}
+
+.contact-whatsapp {
+    background-image: url(./contact-icons/whatsapp.svg);
+    background-color: #009688;
+}
+
+.contact-ig {
+    background-image: url(./contact-icons/instagram.svg);
+    background-color: #DD2A7B;
+}
+
+.state-widget .overlay {
+    opacity: 0;
+}
