@@ -664,6 +664,14 @@
 }
 
 @media (max-width: 767px) {
+    .leave-review-block {
+        margin-top: 55px;
+    }
+
+    .review-form-agree {
+        font-size: 15px;
+    }
+
     .spec-docs-item {
         background-position-y: 2px;
     }
@@ -990,6 +998,19 @@
 }
 
 @media (max-width: 480px) {
+    .detail-compare {
+        margin-left: 0;
+    }
+
+    .review-form-agree {
+        font-size: 14px;
+    }
+
+    .contacts-icon {
+        filter: grayscale(0%);
+        opacity: 1  ;
+    }
+
     .detail-slider-style {
         height: 230px;
     }
