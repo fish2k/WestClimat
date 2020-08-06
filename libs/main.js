@@ -223,4 +223,13 @@ $(document).ready(function () {
     $('.modal-custom').on('hide.bs.modal', function () {
         $(this).find('form.modal-form').get(0).reset()
     })
+
+    // скролл до формы с отзывом
+    $('.review-hint-btn').click(function () {
+        var target = $('.leave-review').offset().top
+
+        $('body, html').animate({
+            scrollTop: (target - 100) + 'px'
+        }, 700)
+    })
 })

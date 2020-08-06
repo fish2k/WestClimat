@@ -153,6 +153,13 @@
 }
 
 @media (max-width: 1200px) {
+    .review-product-name {
+        font-size: 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
     .detail-nav-link {
         font-size: 13px;
         padding-top: 10px;
@@ -995,9 +1002,31 @@
     .col-post {
         margin-bottom: 0;
     }
+
+    .page-reviews .review-list {
+        margin-top: 50px;
+    }
+
+    .page-reviews .review-item {
+        margin-bottom: 30px;
+    }
+
+    .page-reviews .leave-review-block {
+        margin-top: 50px;
+    }
 }
 
 @media (max-width: 480px) {
+    .page-reviews .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .review-product-name {
+        font-size: 14px;
+        padding-left: 10px;
+    }
+
     .detail-compare {
         margin-left: 0;
     }
